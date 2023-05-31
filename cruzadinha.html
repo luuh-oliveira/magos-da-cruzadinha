@@ -668,7 +668,7 @@
                 { palavra: "ROM", inputs: ["input19", "input24", "input32"] },
                 { palavra: "EPROM", inputs: ["input28", "input29", "input30", "input31", "input32"] },
                 { palavra: "FLASH", inputs: ["input78", "input81", "input83", "input84", "input85"] },
-                { palavra: "MEMORIADEMASSA", inputs: ["input4", "input5", "input6", "input7", "input8", "input", "input", "input", "input", "input", "input", "input", "input", "input"] },
+                { palavra: "MEMORIADEMASSA", inputs: ["input63", "input64", "input65", "input66", "input67", "input68", "input69", "input70", "input71", "input72", "input73", "input74", "input75", "input76"] },
                 { palavra: "DMA", inputs: ["input70", "input79", "input82"] },
                 { palavra: "CS", inputs: ["input56", "input57"] },
                 { palavra: "ADDRESSBUS", inputs: ["input34", "input35", "input36", "input37", "input38", "input39", "input40", "input41", "input42", "input43"] },
@@ -693,11 +693,12 @@
                     console.log(idInput);
 
                     var letraInserida = document.getElementById(idInput);
-                    letraInserida = letraInserida.toUpperCase();
+                    letraInserida = letraInserida.value.toUpperCase();
                     letrasInseridas += letraInserida;
                 }
 
                 if (letrasInseridas !== jsonPalavra.palavra) {
+                    alert("Palavra incorreta: " + letrasInseridas)
                     todasAsPalavrasCorretas = false;
                     break;
                 }
