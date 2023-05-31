@@ -1,11 +1,6 @@
 body {
     margin: 0;
     text-decoration: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgba(114, 177, 91, 0.6);
-    background-blend-mode: lighten;
 }
 
 input {
@@ -14,6 +9,7 @@ input {
     text-align: center;
     border: none;
     font-weight: bold;
+    border: 1px solid black;
 }
 
 h2{
@@ -28,7 +24,7 @@ button {
     border: none;
     height: fit-content;
     margin-top: 10px;
-    background-color: #006400;
+    background-color: #f2a960;
     font-size: 15px;
     color: white;
     padding: 5px;
@@ -44,6 +40,12 @@ button {
     flex-direction: column;
     padding: 0 100px 50px 100px;
     align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: url(./kirby.jpg);
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: lighten;
 }
 
 .containerCruzadinha {
@@ -57,17 +59,22 @@ button {
     width: 30px;
     height: 30px;
     text-align: center;
-    border: 1px solid black;
     font-weight: bold;
 }
 
 .containerCruzadinha table {
     border-collapse: collapse;
+    border: 1px solid black;
 }
 
 .containerDicas{
     border-radius: 30px;
     padding: 50px;
-    background-color: #90EE90;
+    background-color: #80cac7;
     width: 80%;
+}
+
+.containerDicas h4{
+    color: white;
+    font-weight: bolder;
 }

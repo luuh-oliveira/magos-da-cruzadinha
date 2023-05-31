@@ -196,7 +196,7 @@
                     <td><input id="input14" type="text" maxlength="1"></td>
                     <td><input id="input15" type="text" maxlength="1"></td>
                     <td><input id="input16" type="text" maxlength="1"></td>
-                    <td class="espaco">*</td>
+                    <td><input value ="*"></td>
                     <td><input id="input17" type="text" maxlength="1"></td>
                     <td><input id="input18" type="text" maxlength="1"></td>
                     <td><input id="input19" type="text" maxlength="1"></td>
@@ -257,7 +257,7 @@
                     <td><input id="input31" type="text" maxlength="1"></td>
                     <td><input id="input32" type="text" maxlength="1"></td>
                     <td><input id="input33" type="text" maxlength="1"></td>
-                    <td class="espaco">*</td>
+                    <td><input value ="*"></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -278,7 +278,7 @@
                     <td><input id="input38" type="text" maxlength="1"></td>
                     <td><input id="input39" type="text" maxlength="1"></td>
                     <td><input id="input40" type="text" maxlength="1"></td>
-                    <td class="espaco">*</td>
+                    <td><input value ="*"></td>
                     <td><input id="input41" type="text" maxlength="1"></td>
                     <td><input id="input42" type="text" maxlength="1"></td>
                     <td><input id="input43" type="text" maxlength="1"></td>
@@ -299,7 +299,7 @@
                     <td><input id="input47" type="text" maxlength="1"></td>
                     <td><input id="input48" type="text" maxlength="1"></td>
                     <td><input id="input49" type="text" maxlength="1"></td>
-                    <td class="espaco">*</td>
+                    <td><input value ="*"></td>
                     <td><input id="input50" type="text" maxlength="1"></td>
                     <td><input id="input51" type="text" maxlength="1"></td>
                     <td><input id="input52" type="text" maxlength="1"></td>
@@ -450,10 +450,10 @@
                     <td><input id="input67" type="text" maxlength="1"></td>
                     <td><input id="input68" type="text" maxlength="1"></td>
                     <td><input id="input69" type="text" maxlength="1"></td>
-                    <td class="espaco">*</td>
+                    <td><input value ="*"></td>
                     <td><input id="input70" type="text" maxlength="1"></td>
                     <td><input id="input71" type="text" maxlength="1"></td>
-                    <td class="espaco">*</td>
+                    <td><input value ="*"></td>
                     <td><input id="input72" type="text" maxlength="1"></td>
                     <td><input id="input73" type="text" maxlength="1"></td>
                     <td><input id="input74" type="text" maxlength="1"></td>
@@ -658,58 +658,59 @@
     </div>
     <script>
 
-        function verificarPalavras() {
+function verificarPalavras() {
 
-            var palavrasCorretas = [
-                { palavra: "CPU", inputs: ["input23", "input29", "input42"] },
-                { palavra: "ULA", inputs: ["input80", "input81", "input82"] },
-                { palavra: "REGISTRADORES", inputs: ["input1", "input2", "input3", "input5", "input9", "input12", "input22", "input27", "input36", "input51", "input55", "input58", "input60"] },
-                { palavra: "RAM", inputs: ["input87", "input76", "input86"] },
-                { palavra: "ROM", inputs: ["input19", "input24", "input32"] },
-                { palavra: "EPROM", inputs: ["input28", "input29", "input30", "input31", "input32"] },
-                { palavra: "FLASH", inputs: ["input78", "input81", "input83", "input84", "input85"] },
-                { palavra: "MEMORIADEMASSA", inputs: ["input63", "input64", "input65", "input66", "input67", "input68", "input69", "input70", "input71", "input72", "input73", "input74", "input75", "input76"] },
-                { palavra: "DMA", inputs: ["input70", "input79", "input82"] },
-                { palavra: "CS", inputs: ["input56", "input57"] },
-                { palavra: "ADDRESSBUS", inputs: ["input34", "input35", "input36", "input37", "input38", "input39", "input40", "input41", "input42", "input43"] },
-                { palavra: "DATABUS", inputs: ["input8", "input11", "input21", "input26", "input45", "input54", "input57"] },
-                { palavra: "I5", inputs: ["input68", "input77"] },
-                { palavra: "I7", inputs: ["input5", "input6"] },
-                { palavra: "DUALCORE", inputs: ["input13", "input14", "input15", "input16", "input17", "input18", "input19", "input20"] },
-                { palavra: "QUADCORE", inputs: ["input46", "input47", "input48", "input49", "input50", "input51", "input52", "input53"] },
-                { palavra: "THREADS", inputs: ["input4", "input7", "input10", "input20", "input25", "input33", "input44"] },
-                { palavra: "CACHE", inputs: ["input56", "input59", "input61", "input62", "input71"] }
-            ];
+var palavrasCorretas = [
+    { palavra: "CPU", inputs: ["input23", "input29", "input42"] },
+    { palavra: "ULA", inputs: ["input80", "input81", "input82"] },
+    { palavra: "REGISTRADORES", inputs: ["input1", "input2", "input3", "input5", "input9", "input12", "input22", "input27", "input36", "input51", "input55", "input58", "input60"] },
+    { palavra: "RAM", inputs: ["input87", "input76", "input86"] },
+    { palavra: "ROM", inputs: ["input19", "input24", "input32"] },
+    { palavra: "EPROM", inputs: ["input28", "input29", "input30", "input31", "input32"] },
+    { palavra: "FLASH", inputs: ["input78", "input81", "input83", "input84", "input85"] },
+    { palavra: "MEMORIADEMASSA", inputs: ["input63", "input64", "input65", "input66", "input67", "input68", "input69", "input70", "input71", "input72", "input73", "input74", "input75", "input76"] },
+    { palavra: "DMA", inputs: ["input70", "input79", "input82"] },
+    { palavra: "CS", inputs: ["input56", "input57"] },
+    { palavra: "ADDRESSBUS", inputs: ["input34", "input35", "input36", "input37", "input38", "input39", "input40", "input41", "input42", "input43"] },
+    { palavra: "DATABUS", inputs: ["input8", "input11", "input21", "input26", "input45", "input54", "input57"] },
+    { palavra: "I5", inputs: ["input68", "input77"] },
+    { palavra: "I7", inputs: ["input5", "input6"] },
+    { palavra: "DUALCORE", inputs: ["input13", "input14", "input15", "input16", "input17", "input18", "input19", "input20"] },
+    { palavra: "QUADCORE", inputs: ["input46", "input47", "input48", "input49", "input50", "input51", "input52", "input53"] },
+    { palavra: "THREADS", inputs: ["input4", "input7", "input10", "input20", "input25", "input33", "input44"] },
+    { palavra: "CACHE", inputs: ["input56", "input59", "input61", "input62", "input71"] }
+];
 
-            var todasAsPalavrasCorretas = true;
+var todasAsPalavrasCorretas = true;
 
-            for (var i = 0; i < palavrasCorretas.length; i++) {
+for (var i = 0; i < palavrasCorretas.length; i++) {
 
-                var jsonPalavra = palavrasCorretas[i];
-                var letrasInseridas = "";
+    var jsonPalavra = palavrasCorretas[i];
+    var letrasInseridas = "";
 
-                for (var posicao = 0; posicao < jsonPalavra.inputs.length; posicao++) {
-                    var idInput = jsonPalavra.inputs[posicao];
-                    console.log(idInput);
+    for (var posicao = 0; posicao < jsonPalavra.inputs.length; posicao++) {
+        var idInput = jsonPalavra.inputs[posicao];
+        console.log(idInput);
 
-                    var letraInserida = document.getElementById(idInput);
-                    letraInserida = letraInserida.value.toUpperCase();
-                    letrasInseridas += letraInserida;
-                }
+        var letraInserida = document.getElementById(idInput);
+        letraInserida = letraInserida.value.toUpperCase();
+        letrasInseridas += letraInserida;
+    }
 
-                if (letrasInseridas !== jsonPalavra.palavra) {
-                    alert("Palavra incorreta: " + letrasInseridas)
-                    todasAsPalavrasCorretas = false;
-                    break;
-                }
-            }
+    if (letrasInseridas !== jsonPalavra.palavra) {
+        alert("Palavra incorreta: " + letrasInseridas)
+        todasAsPalavrasCorretas = false;
+        break;
+    }
+}
 
-            if (todasAsPalavrasCorretas) {
-                alert("Parabéns! Todas as palavras estão corretas.");
-            } else {
-                alert("Ainda existem palavras incorretas.");
-            }
-        }
+if (todasAsPalavrasCorretas) {
+    alert("Parabéns! Todas as palavras estão corretas.");
+} else {
+    alert("Ainda existem palavras incorretas.");
+}
+}
+
 
 
     </script>
