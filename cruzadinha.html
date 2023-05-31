@@ -634,6 +634,7 @@
         </div>
 
         <div class="containerDicas">
+            <h3>Dicas</h3>
             <h4>1 - Conhecida como “cérebro do computador, executa instruções e controla as operações do sistema.</h4>
             <h4>2 - Responsável por realizar operações lógicas e aritméticas.</h4>
             <h4>3 - Locais de armazenamento temporário de dados de alta velocidade.</h4>
@@ -698,7 +699,6 @@ for (var i = 0; i < palavrasCorretas.length; i++) {
     }
 
     if (letrasInseridas !== jsonPalavra.palavra) {
-        alert("Palavra incorreta: " + letrasInseridas)
         todasAsPalavrasCorretas = false;
         break;
     }
@@ -707,7 +707,7 @@ for (var i = 0; i < palavrasCorretas.length; i++) {
 if (todasAsPalavrasCorretas) {
     alert("Parabéns! Todas as palavras estão corretas.");
 } else {
-    alert("Ainda existem palavras incorretas.");
+    alert("Existem palavras incorretas.");
 }
 }
 
