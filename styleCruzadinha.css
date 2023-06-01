@@ -17,6 +17,10 @@ input {
     border-radius: 6px;
 }
 
+a {
+    font-size: 13px;
+}
+
 button {
     width: 100%;
     border: none;
