@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Rubik+Puddles&display=swap"
         rel="stylesheet">
+    <link rel="website icon" type="png" href="./kirby-icon.png">
     <link rel="stylesheet" href="styleCruzadinha.css">
 </head>
 
@@ -698,19 +699,20 @@
         var todasAsPalavrasCorretas = true;
 
         for (var i = 0; i < palavrasCorretas.length; i++) {
-            var palavra = palavrasCorretas[i];
-            var letrasInseridas = "";
+            var palavraAtual = palavrasCorretas[i].palavra;
+            var inputsPalavraAtual = palavrasCorretas[i].inputs;
 
-            for (var posicao = 0; posicao < palavra.inputs.length; posicao++) {
-                var inputId = palavra.inputs[posicao];
+            for (var posicao = 0; posicao < palavraAtual.length; posicao++) {
+
+                // Pegando a letra que o usuário inseriu
+                var inputId = inputsPalavraAtual[posicao];
                 var input = document.getElementById(inputId);
                 var letraInserida = input.value.toUpperCase();
-                letrasInseridas += letraInserida;
 
                 if (letraInserida === "") {
                     input.style.backgroundColor = ""; // Limpar cor de fundo se o input estiver vazio
                     todasAsPalavrasCorretas = false;
-                } else if (letraInserida === palavra.palavra.charAt(posicao)) {
+                } else if (letraInserida === palavraAtual.charAt(posicao)) {
                     input.style.backgroundColor = "rgb(150, 231, 115)"; // Corrigir letra: verde
                 } else {
                     input.style.backgroundColor = "rgb(245, 102, 102)"; // Letra incorreta: vermelho
